@@ -50,6 +50,19 @@
             <artifactId>mariadb-java-client</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <!--Mysql Driver Dependency-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!--PostgreSql Driver Dependency-->
+        <dependency>
+            <groupId>dk.cloudcreate.essentials.components</groupId>
+            <artifactId>spring-boot-starter-postgresql</artifactId>
+            <version>0.9.4</version>
+        </dependency>
+
         <!--Configuration Dependency-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
