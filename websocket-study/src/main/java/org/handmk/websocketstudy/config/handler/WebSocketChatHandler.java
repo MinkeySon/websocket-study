@@ -53,13 +53,9 @@ public class WebSocketChatHandler extends TextWebSocketHandler {
         log.info("[chat] get payload : {}",payload);
 
         ChatMessageDto chatMessageDto = mapper.readValue(payload, ChatMessageDto.class);
-        log.info("[chat] sender session : {}", session);
-        log.info("[chat] sender user type : {}", chatMessageDto.getUserType());
 
         ChatRoomMembers chatRoomData = getChatRoomData(chatMessageDto);
         log.info("[chat] ChatRoomData 조회 완료");
-
-        log.info("[chat] chat room map : {}", chatRoomSessionMap.toString());
 
         if(!chatRoomSessionMap.containsKey(chatRoomData.getChatRoom().getRoomNumber())){
             log.info("[chat] add chatting room to map");
