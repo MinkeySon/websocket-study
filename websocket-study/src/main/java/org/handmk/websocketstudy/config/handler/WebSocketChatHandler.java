@@ -55,7 +55,7 @@ public class WebSocketChatHandler extends TextWebSocketHandler {
         ChatMessageDto chatMessageDto = mapper.readValue(payload, ChatMessageDto.class);
 
         ChatRoomMembers chatRoomData = getChatRoomData(chatMessageDto);
-        log.info("[chat] ChatRoomData 조회 완료");
+        log.info("[chat] complete search chat room data");
 
         if(!chatRoomSessionMap.containsKey(chatRoomData.getChatRoom().getRoomNumber())){
             log.info("[chat] add chatting room to map");
