@@ -156,7 +156,7 @@ public class WebSocketChatHandler extends TextWebSocketHandler {
      * @return Buyer 여부
      */
     private boolean isBuyer(ChatMessageDto chatMessageDto){ // 보낸 메세지에서 userType 확인 메서드
-        log.info("[chat] 메세지 내 user type 확인");
+        log.info("[chat] check user type");
         if(chatMessageDto.getUserType().equals(UserType.BUYER)){
             return true;
         }else{
