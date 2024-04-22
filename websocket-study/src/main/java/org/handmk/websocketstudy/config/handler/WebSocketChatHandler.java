@@ -177,7 +177,7 @@ public class WebSocketChatHandler extends TextWebSocketHandler {
      * @return ChatRoomMembers
      */
     private ChatRoomMembers getChatRoomData(ChatMessageDto chatMessageDto){
-        log.info("[chat] chatting room data 조회");
+        log.info("[chat] get chatting room data");
         String chatRoomId = chatMessageDto.getChatRoomId();
         log.info("[chat] chatroomid : {}", chatRoomId);
         ChatRoom findChatRoom = chatRoomRepository.findChatRoomByRoomNumber(chatRoomId);
